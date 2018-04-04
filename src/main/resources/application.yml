@@ -6,9 +6,9 @@ server:
 elastic_search:
   client:
     service: 
-      serviceUrl: ${vcap.services.es-service.credentials.url:http://127.0.0.1}
-      servicePort: ${vcap.services.es-service.credentials.port:1060}
-      esindex: ${vcap.services.es-service.credentials.esindex:us_large_cities}
+      serviceUrl: ${ELASTICSEARCH_SERVICE_HOST:http://127.0.0.1}
+      servicePort: ${ELASTICSEARCH_SERVICE_PORT:1060}
+      esindex: ${ELASTICSEARCH_INDEX:us_large_cities}
 
 ---
 spring:

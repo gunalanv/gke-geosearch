@@ -33,6 +33,6 @@ public class ElasticSearchServiceController {
 	 
 	 public String toString(){
 		 logger.debug("Elastic Search URL: " + elasticSearchUrl + ":" + elasticSearchPort + "/" + elasticSearchIndex);
-		 return elasticSearchUrl + ":" + elasticSearchPort + "/" + elasticSearchIndex;
+		 return "http://" + elasticSearchUrl + ":" + elasticSearchPort + "/" + elasticSearchIndex;
 	 }
 }
