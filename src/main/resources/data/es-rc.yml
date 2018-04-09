@@ -54,5 +54,22 @@ spec:
           name: ci-data-es
       volumes:
         - name: ci-data-es
-          persistentVolumeClaim:
-            claimName: es-claim-pvc
+          emptyDir: {}
+---
+ apiVersion: v1
+ kind: Service
+ metadata:
+   name: elasticsearch
+   labels:
+     component: elasticsearch
+ spec:
+   type: NodePort
+   selector:
+     component: elasticsearch
+   ports:
+   - name: http
+     port: 9200
+     protocol: TCP
+   - name: transport
+     port: 9300
+     protocol: TCP
