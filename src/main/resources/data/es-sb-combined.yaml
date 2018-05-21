@@ -24,7 +24,8 @@ spec:
           capabilities:
             add:
               - IPC_LOCK
-        image: harbor.pks.gmancloud.com/pks/elasticsearch:2.0
+        image: harbor.pks.haas-146.pez.pivotal.io/pks/elasticsearch:1.0
+        imagePullPolicy: Always
         env:
         - name: KUBERNETES_CA_CERTIFICATE_FILE
           value: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
@@ -55,6 +56,8 @@ spec:
       volumes:
         - name: ci-data-es
           emptyDir: {}
+      imagePullSecrets:
+        - name: regsecret
 ---
  apiVersion: v1
  kind: Service
@@ -85,12 +88,14 @@ spec:
     spec:
       containers:
       - name: esinitializer
-        image: harbor.pks.gmancloud.com/pks/esinit:4.0
+        image: harbor.pks.haas-146.pez.pivotal.io/pks/esinit:1.0
       initContainers:
       - name: init-myservice
         image: busybox
         command: ['sh', '-c', 'until nslookup elasticsearch; do echo waiting for elasticsearch; sleep 2; done;']        
       restartPolicy: Never
+      imagePullSecrets:
+        - name: regsecret
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
@@ -105,7 +110,7 @@ spec:
     spec:
       containers:
       - name: geosearch-app
-        image: harbor.pks.gmancloud.com/pks/geosearch:latest
+        image: harbor.pks.haas-146.pez.pivotal.io/pks/geosearch:1.0
         ports:
         - containerPort: 8080
       initContainers:
@@ -126,4 +131,4 @@ spec:
   - protocol: TCP
     port: 8080
     targetPort: 8080
-  type: LoadBalancer        
+  type: LoadBalancer
