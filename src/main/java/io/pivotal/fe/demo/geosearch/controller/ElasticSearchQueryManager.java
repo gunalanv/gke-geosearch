@@ -31,7 +31,10 @@ public class ElasticSearchQueryManager {
 		try{
 			client = HttpClients.createDefault();
 			HttpPost request = new HttpPost(esController.toString() + escommand);
-
+			
+			request.setHeader("Accept", "application/json");
+			request.setHeader("Content-Type", "application/json");
+			
 			request.setEntity(new StringEntity(esquery));	
 			HttpResponse response = client.execute(request);
 
