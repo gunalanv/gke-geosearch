@@ -6,7 +6,7 @@ server:
 elastic_search:
   client:
     service: 
-      serviceUrl: ${ELASTICSEARCH_SERVICE_HOST:http://127.0.0.1}
+      serviceUrl: ${ELASTICSEARCH_SERVICE_HOST:127.0.0.1}
       servicePort: ${ELASTICSEARCH_SERVICE_PORT:1060}
       esindex: ${ELASTICSEARCH_INDEX:us_large_cities}
 
