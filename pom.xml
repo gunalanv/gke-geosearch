@@ -79,7 +79,7 @@
             			<creationTime>USE_CURRENT_TIMESTAMP</creationTime>
         			</container>         		
         			<from>
-            			<image>openjdk:8-jre-alpine</image>
+            			<image>openjdk:8-jdk-alpine</image>
         			</from>
         			<to>
             			<tags>${project.version}</tags>
