@@ -25,7 +25,7 @@
 		<docker.image.prefix>pks</docker.image.prefix>
 		<docker.private.repository>harbor.pks.gmancloud.com</docker.private.repository>
 		<jib-maven-plugin.version>1.7.0</jib-maven-plugin.version>
-		<start-class>io.pivotal.fe.demo.geosearch.GeobsearchApplication</start-class>
+		<start-class>io.pivotal.fe.demo.geosearch.GeoSearchApplication</start-class>
 	</properties>
 
 	<dependencies>
