@@ -1,6 +1,6 @@
 substitutions:
   _IMAGE_NAME: geosearch-spring-boot # Configure this
-  _GCS_CACHE_BUCKET: cloud-build-demo
+  _GCS_CACHE_BUCKET: geosearch-mvncache-bucket
 
 steps:
 
