@@ -1,4 +1,4 @@
-# SpringBoot and Elastic Search Example on Google Compute Engine
+# SpringBoot and Elastic Search Example on Google Kubernetes Engine (GKE)
 
 ## Install GKE with Elastic Search
 This section involves a couple of steps: install GKE on a supported IaaS, install Elastic Search on the deployed Kubernetes cluster and load the Location data. We will use a sample dataset in this case, but you can load any other Positional data of your choice and have it display on the map accordingly. This is a good website to download Location data based on your specific customer's need. 
