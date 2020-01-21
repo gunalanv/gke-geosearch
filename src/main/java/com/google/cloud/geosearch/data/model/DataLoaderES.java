@@ -1,4 +1,4 @@
-package io.pivotal.fe.demo.geosearch.data.model;
+package com.google.cloud.geosearch.data.model;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

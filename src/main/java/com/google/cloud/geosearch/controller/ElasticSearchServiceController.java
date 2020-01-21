@@ -1,4 +1,4 @@
-package io.pivotal.fe.demo.geosearch.controller;
+package com.google.cloud.geosearch.controller;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

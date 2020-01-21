@@ -1,4 +1,4 @@
-package io.pivotal.fe.demo.geosearch.data.impl;
+package com.google.cloud.geosearch.data.impl;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,11 +8,10 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.google.cloud.geosearch.controller.ElasticSearchQueryManager;
+import com.google.cloud.geosearch.data.model.ElasticSearchHitBucket;
+import com.google.cloud.geosearch.data.model.ElasticSearchMasterDocument;
 import com.google.gson.Gson;
-
-import io.pivotal.fe.demo.geosearch.controller.ElasticSearchQueryManager;
-import io.pivotal.fe.demo.geosearch.data.model.ElasticSearchHitBucket;
-import io.pivotal.fe.demo.geosearch.data.model.ElasticSearchMasterDocument;
 
 @Component
 public class ElasticSearchDaoImpl implements GeoBoundingSearchDao{

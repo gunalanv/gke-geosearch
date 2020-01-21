@@ -1,16 +1,15 @@
-package io.pivotal.fe.demo.geosearch.data.seed;
+package com.google.cloud.geosearch.data.seed;
 
 import java.io.FileNotFoundException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+import com.google.cloud.geosearch.data.model.ParkData;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import com.google.gson.stream.JsonReader;
-
-import io.pivotal.fe.demo.geosearch.data.model.ParkData;
 
 public class DataLoader {
 

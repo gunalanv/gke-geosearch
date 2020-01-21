@@ -1,4 +1,4 @@
-package io.pivotal.fe.demo.geosearch.data.impl;
+package com.google.cloud.geosearch.data.impl;
 
 import java.util.ArrayList;
 import java.util.HashMap;

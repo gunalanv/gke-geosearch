@@ -1,11 +1,11 @@
-package io.pivotal.fe.demo.geosearch.data.seed;
+package com.google.cloud.geosearch.data.seed;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 
-import io.pivotal.fe.demo.geosearch.controller.ElasticSearchQueryManager;
+import com.google.cloud.geosearch.controller.ElasticSearchQueryManager;
 
 public class ESBootstrapRunner implements CommandLineRunner {
 	private static final Log logger = LogFactory.getLog(ESBootstrapRunner.class);

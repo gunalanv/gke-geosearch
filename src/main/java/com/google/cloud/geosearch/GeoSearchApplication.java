@@ -1,4 +1,4 @@
-package io.pivotal.fe.demo.geosearch;
+package com.google.cloud.geosearch;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

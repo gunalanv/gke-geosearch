@@ -1,4 +1,4 @@
-package io.pivotal.fe.demo.geosearch.controller;
+package com.google.cloud.geosearch.controller;
 
 import java.io.BufferedReader;
 import java.io.IOException;
